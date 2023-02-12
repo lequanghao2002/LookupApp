@@ -45,6 +45,7 @@ class _MainScreenState extends State<MainScreen> {
             _currenIndex = index;
           });
         },
+        selectedItemColor: ColorPalette.primaryColor,
         unselectedItemColor: Colors.black.withOpacity(0.5),
         margin: EdgeInsets.symmetric(
           horizontal: kMediumPadding,
@@ -65,7 +66,6 @@ class _MainScreenState extends State<MainScreen> {
               size: kDefaultIconSize,
             ),
             title: Text('Yêu thích'),
-            selectedColor: Colors.red,
           ),
           SalomonBottomBarItem(
             icon: Icon(
@@ -73,7 +73,6 @@ class _MainScreenState extends State<MainScreen> {
               size: kDefaultIconSize,
             ),
             title: Text('Máy ảnh'),
-            selectedColor: Colors.orange,
           ),
           SalomonBottomBarItem(
             icon: Icon(
@@ -81,16 +80,7 @@ class _MainScreenState extends State<MainScreen> {
               size: kDefaultIconSize,
             ),
             title: Text('Hình ảnh'),
-            selectedColor: Colors.blue,
           ),
-          // SalomonBottomBarItem(
-          //   icon: Icon(
-          //     FontAwesomeIcons.user,
-          //     size: kDefaultIconSize,
-          //   ),
-          //   title: Text('Tài khoản'),
-          //   selectedColor: Colors.blue,
-          // ),
         ],
       ),
     );
