@@ -46,7 +46,7 @@ class _ItemMedicineWidgetState extends State<ItemMedicineWidget> {
           Container(
             margin: EdgeInsets.all(10),
             child: ImageHelper.loadFromAsset(
-              widget.medicineModel.image,
+              widget.medicineModel.hinhAnh,
               radius: BorderRadius.all(
                 Radius.circular(kDefaultPadding),
               ),
@@ -64,7 +64,7 @@ class _ItemMedicineWidgetState extends State<ItemMedicineWidget> {
                 SizedBox(
                   width: 160,
                   child: Text(
-                    'Tên: ${widget.medicineModel.name}',
+                    'Tên: ${widget.medicineModel.tenVietNam}',
                     style: TextStyle(
                       fontSize: kDefaultPadding,
                       fontWeight: FontWeight.bold,
@@ -75,7 +75,7 @@ class _ItemMedicineWidgetState extends State<ItemMedicineWidget> {
                 SizedBox(
                   width: 160,
                   child: Text(
-                    'Mô tả: ${widget.medicineModel.description}',
+                    'Mô tả: ${widget.medicineModel.moTa}',
                     style: TextStyle(
                       fontSize: kDefaultPadding,
                       fontWeight: FontWeight.bold,
@@ -87,11 +87,11 @@ class _ItemMedicineWidgetState extends State<ItemMedicineWidget> {
                 Spacer(),
                 Row(
                   children: [
-                    widget.medicineModel.islove == false
+                    widget.medicineModel.yeuThich == false
                         ? GestureDetector(
                             onTap: () {
                               setState(() {
-                                widget.medicineModel.islove = true;
+                                widget.medicineModel.yeuThich = true;
                               });
                             },
                             child: Icon(
@@ -101,7 +101,7 @@ class _ItemMedicineWidgetState extends State<ItemMedicineWidget> {
                         : GestureDetector(
                             onTap: () {
                               setState(() {
-                                widget.medicineModel.islove = false;
+                                widget.medicineModel.yeuThich = false;
                               });
                             },
                             child: Icon(

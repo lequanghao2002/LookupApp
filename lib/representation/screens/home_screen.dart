@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
     } else {
       result = listMedicine
           .where(
-            (element) => element.name.toLowerCase().contains(
+            (element) => element.tenVietNam.toLowerCase().contains(
                   keyWord.toLowerCase(),
                 ),
           )

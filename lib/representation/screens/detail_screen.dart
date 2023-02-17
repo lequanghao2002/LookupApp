@@ -30,7 +30,7 @@ class _DetailScreenState extends State<DetailScreen> {
         children: [
           Positioned.fill(
             child: ImageHelper.loadFromAsset(
-              widget.medicineModel.image,
+              widget.medicineModel.hinhAnh,
               //fit: BoxFit.fill,
             ),
           ),
@@ -77,11 +77,11 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                     ),
                     Spacer(),
-                    widget.medicineModel.islove == false
+                    widget.medicineModel.yeuThich == false
                         ? GestureDetector(
                             onTap: () {
                               setState(() {
-                                widget.medicineModel.islove = true;
+                                widget.medicineModel.yeuThich = true;
                               });
                             },
                             child: Container(
@@ -102,7 +102,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         : GestureDetector(
                             onTap: () {
                               setState(() {
-                                widget.medicineModel.islove = false;
+                                widget.medicineModel.yeuThich = false;
                               });
                             },
                             child: Container(
@@ -161,7 +161,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                widget.medicineModel.name.toUpperCase(),
+                                widget.medicineModel.tenVietNam.toUpperCase(),
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -173,7 +173,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                widget.medicineModel.scienceName,
+                                widget.medicineModel.tenKhoaHoc,
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -197,7 +197,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              widget.medicineModel.description,
+                              widget.medicineModel.moTa,
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -219,7 +219,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              widget.medicineModel.processing,
+                              widget.medicineModel.cheBien,
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -241,7 +241,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              widget.medicineModel.action,
+                              widget.medicineModel.tinhVi,
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -263,7 +263,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              widget.medicineModel.performance,
+                              widget.medicineModel.congNang,
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -285,7 +285,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              widget.medicineModel.use,
+                              widget.medicineModel.cachDung,
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -307,7 +307,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              widget.medicineModel.taboo,
+                              widget.medicineModel.kiengKi,
                               style: TextStyle(
                                 fontSize: 18,
                               ),

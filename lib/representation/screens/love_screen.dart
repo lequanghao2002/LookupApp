@@ -22,12 +22,12 @@ class LoveScreen extends StatefulWidget {
 
 class _LoveScreenState extends State<LoveScreen> {
   // Iterable<MedicineModel> loveList =
-  //     listMedicine.where((element) => element.islove == true);
+  //     listMedicine.where((element) => element.yeuThich == true);
 
   Iterable<MedicineModel> loveList = [];
   @override
   void initState() {
-    loveList = listMedicine.where((element) => element.islove == true);
+    loveList = listMedicine.where((element) => element.yeuThich == true);
     super.initState();
   }
 
@@ -126,7 +126,7 @@ class _LoveScreenState extends State<LoveScreen> {
                                     Container(
                                       margin: EdgeInsets.all(10),
                                       child: ImageHelper.loadFromAsset(
-                                        e.image,
+                                        e.hinhAnh,
                                         radius: BorderRadius.all(
                                           Radius.circular(kDefaultPadding),
                                         ),
@@ -145,7 +145,7 @@ class _LoveScreenState extends State<LoveScreen> {
                                           SizedBox(
                                             width: 160,
                                             child: Text(
-                                              'Tên: ${e.name}',
+                                              'Tên: ${e.tenVietNam}',
                                               style: TextStyle(
                                                 fontSize: kDefaultPadding,
                                                 fontWeight: FontWeight.bold,
@@ -156,7 +156,7 @@ class _LoveScreenState extends State<LoveScreen> {
                                           SizedBox(
                                             width: 160,
                                             child: Text(
-                                              'Mô tả: ${e.description}',
+                                              'Mô tả: ${e.moTa}',
                                               style: TextStyle(
                                                 fontSize: kDefaultPadding,
                                                 fontWeight: FontWeight.bold,
@@ -168,11 +168,11 @@ class _LoveScreenState extends State<LoveScreen> {
                                           Spacer(),
                                           Row(
                                             children: [
-                                              e.islove == false
+                                              e.yeuThich == false
                                                   ? GestureDetector(
                                                       onTap: () {
                                                         setState(() {
-                                                          e.islove = true;
+                                                          e.yeuThich = true;
                                                         });
                                                       },
                                                       child: Icon(
@@ -182,7 +182,7 @@ class _LoveScreenState extends State<LoveScreen> {
                                                   : GestureDetector(
                                                       onTap: () {
                                                         setState(() {
-                                                          e.islove = false;
+                                                          e.yeuThich = false;
                                                         });
                                                       },
                                                       child: Icon(

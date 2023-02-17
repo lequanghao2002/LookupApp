@@ -1,27 +1,25 @@
 class MedicineModel {
   MedicineModel({
-    required this.id,
-    this.islove = false,
-    required this.image,
-    this.name = 'Chưa cập nhật',
-    this.scienceName = 'Chưa cập nhật',
-    this.description = 'Chưa cập nhật',
-    this.processing = 'Chưa cập nhật',
-    this.action = 'Chưa cập nhật',
-    this.performance = 'Chưa cập nhật',
-    this.use = 'Chưa cập nhật',
-    this.taboo = 'Chưa cập nhật',
+    this.yeuThich = false,
+    required this.hinhAnh,
+    this.tenVietNam = 'Chưa cập nhật',
+    this.tenKhoaHoc = 'Chưa cập nhật',
+    this.moTa = 'Chưa cập nhật',
+    this.cheBien = 'Chưa cập nhật',
+    this.tinhVi = 'Chưa cập nhật',
+    this.congNang = 'Chưa cập nhật',
+    this.cachDung = 'Chưa cập nhật',
+    this.kiengKi = 'Chưa cập nhật',
   });
 
-  final int id;
-  bool islove;
-  final String image;
-  final String name;
-  final String scienceName;
-  final String description;
-  final String processing;
-  final String action;
-  final String performance;
-  final String use;
-  final String taboo;
+  bool yeuThich;
+  final String hinhAnh;
+  final String tenVietNam;
+  final String tenKhoaHoc;
+  final String moTa;
+  final String cheBien;
+  final String tinhVi;
+  final String congNang;
+  final String cachDung;
+  final String kiengKi;
 }
